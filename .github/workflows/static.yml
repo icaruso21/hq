@@ -31,13 +31,25 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Generate site index
+        run: |
+          cd sites
+          LINKS=""
+          for dir in */; do
+            name="${dir%/}"
+            if [ "$name" != "_template" ]; then
+              LINKS="$LINKS<li><a href=\"$name/\">$name</a></li>"
+            fi
+          done
+          if [ -n "$LINKS" ]; then
+            sed -i "s|<li class=\"empty\">.*</li>|$LINKS|" index.html
+          fi
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          path: 'sites'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

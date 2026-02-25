@@ -14,10 +14,12 @@ Then build your site in that directory.
 
 ## Deploying
 
-GitHub Pages serves from this repo. Each site lives at:
+A GitHub Actions workflow deploys the `sites/` directory to GitHub Pages and auto-generates a landing page with links to all sites.
+
+Each site lives at:
 
 ```
-https://<username>.github.io/hq/sites/<site-name>/
+https://<username>.github.io/hq/<site-name>/
 ```
 
-To enable: go to repo Settings > Pages > set source to "Deploy from a branch" > pick `main` / `/ (root)`.
+To enable: go to repo Settings > Pages > set source to "GitHub Actions".
