@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurt Liebert — Paintings</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">KL</a>
+      <div class="nav-links">
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#community">Community</a>
+        <a href="#find">Find the Art</a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="top" class="hero">
+    <div class="hero-grain"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Kurt Liebert</h1>
+      <p class="hero-subtitle">Acrylic on plywood. Found objects. Seattle.</p>
+      <p class="hero-tagline">"Painters don't ever have to paint the same painting twice."</p>
+      <a href="#gallery" class="hero-cta">See the Work</a>
+    </div>
+  </header>
+
+  <!-- Gallery -->
+  <section id="gallery" class="section gallery-section">
+    <h2 class="section-title">The Paintings</h2>
+    <p class="section-intro">Acrylic on plywood, found canvases, no two alike. Click a piece to see it up close.</p>
+
+    <div class="gallery-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="available">Available</button>
+      <button class="filter-btn" data-filter="sold">Sold</button>
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid">
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close">&times;</button>
+    <div class="lightbox-content">
+      <div class="lightbox-art" id="lightbox-art"></div>
+      <div class="lightbox-info">
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-details"></p>
+        <p id="lightbox-price"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="about" class="section about-section">
+    <div class="about-grid">
+      <div class="about-portrait">
+        <div class="portrait-frame">
+          <div class="portrait-placeholder">
+            <svg viewBox="0 0 200 260" xmlns="http://www.w3.org/2000/svg">
+              <rect width="200" height="260" fill="#8B6914" rx="4"/>
+              <circle cx="100" cy="90" r="40" fill="#D4A843" opacity="0.7"/>
+              <path d="M40 260 Q100 160 160 260" fill="#D4A843" opacity="0.5"/>
+              <text x="100" y="240" text-anchor="middle" fill="#f5e6c8" font-family="Special Elite" font-size="12">Rockstar → Painter</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="about-text">
+        <h2 class="section-title">About Kurt</h2>
+        <p>When he was a kid, Kurt Liebert wanted to be a rockstar. So he started writing music. In 1994, he put together a band called <strong>Bicycle</strong> — they biked across the entire continental US from New York City to Seattle, playing gigs along the way, landing a story in <em>The New York Times Magazine</em>, and recording an EP at Prince's Paisley Park studios.</p>
+        <p>Their album on Capricorn Records made the Huffington Post's list of the most underrated albums of the 1990s.</p>
+        <p>In 2001, Kurt broke up the band and started painting. <strong>Acrylic on plywood. Found objects as canvases.</strong> Every piece is one of a kind — raw, irreverent, and rooted in a life lived on the road and in the rain of the Pacific Northwest.</p>
+        <p class="about-quote">"Painting is so much different than writing songs. Painters don't ever have to paint the same painting twice."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Board -->
+  <section id="community" class="section community-section">
+    <h2 class="section-title">The Collectors' Board</h2>
+    <p class="section-intro">Got a Kurt Liebert piece? This is your spot. Share where it hangs, trade stories, connect with fellow collectors.</p>
+
+    <div class="community-board" id="community-board">
+      <div class="post-form">
+        <input type="text" id="post-name" placeholder="Your name" maxlength="50">
+        <input type="text" id="post-piece" placeholder="Which piece do you own? (optional)" maxlength="100">
+        <textarea id="post-message" placeholder="Share your story..." maxlength="500" rows="3"></textarea>
+        <button id="post-submit" class="btn-post">Post to the Board</button>
+      </div>
+
+      <div class="posts-list" id="posts-list">
+      </div>
+    </div>
+  </section>
+
+  <!-- Find the Art -->
+  <section id="find" class="section find-section">
+    <h2 class="section-title">Find the Art</h2>
+    <div class="find-grid">
+      <div class="find-card">
+        <div class="find-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4C16.268 4 10 10.268 10 18c0 11 14 26 14 26s14-15 14-26c0-7.732-6.268-14-14-14z" fill="#D4A843" opacity="0.8"/>
+            <circle cx="24" cy="18" r="6" fill="#1a1a1a"/>
+          </svg>
+        </div>
+        <h3>Sparklebarn</h3>
+        <p class="find-address">2611 NW Market St<br>Seattle, WA 98107<br>Ballard — next to the National Nordic Museum</p>
+        <p class="find-desc">Seattle's vintage furniture and art gallery. Scandinavian &amp; mid-century modern design with a rotating showcase of local artists — including Kurt's paintings on plywood.</p>
+        <a href="https://www.sparklebarn.com" target="_blank" rel="noopener" class="find-link">Visit Sparklebarn &rarr;</a>
+      </div>
+      <div class="find-card">
+        <div class="find-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="6" width="36" height="36" rx="4" fill="#D4A843" opacity="0.8"/>
+            <path d="M16 16h16v16H16z" fill="#1a1a1a"/>
+            <path d="M20 20h8v8h-8z" fill="#D4A843" opacity="0.5"/>
+          </svg>
+        </div>
+        <h3>Online Shop</h3>
+        <p class="find-desc">Browse and buy directly from Kurt. Paintings ship from Seattle. Each piece is an original — acrylic on found plywood.</p>
+        <a href="https://www.kurtpaintings.com" target="_blank" rel="noopener" class="find-link">Shop at kurtpaintings.com &rarr;</a>
+      </div>
+      <div class="find-card">
+        <div class="find-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="18" fill="#D4A843" opacity="0.8"/>
+            <circle cx="24" cy="24" r="8" fill="#1a1a1a"/>
+            <circle cx="24" cy="24" r="3" fill="#D4A843" opacity="0.5"/>
+          </svg>
+        </div>
+        <h3>Follow Along</h3>
+        <p class="find-desc">See new work, studio shots, and the occasional throwback to the Bicycle days.</p>
+        <a href="https://www.instagram.com/kurt6635/" target="_blank" rel="noopener" class="find-link">@kurt6635 on Instagram &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; Kurt Liebert. Acrylic on plywood since 2001.</p>
+      <p class="footer-sub">From NYC to Seattle by bicycle. Now painting in the rain.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
